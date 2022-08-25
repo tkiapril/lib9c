@@ -68,7 +68,7 @@ namespace Lib9c.Tests.Action
             _questListAddress = _avatarAddress.Derive(LegacyQuestListKey);
             agentState.avatarAddresses.Add(0, _avatarAddress);
 
-            var currency = new Currency("NCG", 2, minters: null);
+            var currency = Currency.Legacy("NCG", 2, null);
             var goldCurrencyState = new GoldCurrencyState(currency);
             _weeklyArenaState = new WeeklyArenaState(0);
             _initialState = new State()

@@ -18,7 +18,7 @@ namespace Nekoyume.Helper
             [CanBeNull] IImmutableSet<Address> minters
         )
         {
-            return new Currency(runeRow.Ticker, decimalPlaces: decimalPlaces, minters: minters);
+            return Currency.Legacy(runeRow.Ticker, decimalPlaces, minters);
         }
 
         public static FungibleAssetValue ToFungibleAssetValue(

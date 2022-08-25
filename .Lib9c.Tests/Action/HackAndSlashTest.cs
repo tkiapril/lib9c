@@ -71,7 +71,7 @@
             _questListAddress = _avatarAddress.Derive(LegacyQuestListKey);
             agentState.avatarAddresses.Add(0, _avatarAddress);
             _weeklyArenaState = new WeeklyArenaState(0);
-            var currency = new Currency("NCG", 2, minters: null);
+            var currency = Currency.Legacy("NCG", 2, null);
             var goldCurrencyState = new GoldCurrencyState(currency);
             _initialState = new State()
                 .SetState(Addresses.GoldCurrency, goldCurrencyState.Serialize())

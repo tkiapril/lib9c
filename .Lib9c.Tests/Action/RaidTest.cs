@@ -33,7 +33,7 @@ namespace Lib9c.Tests.Action
             _tableSheets = new TableSheets(_sheets);
             _agentAddress = new PrivateKey().ToAddress();
             _avatarAddress = new PrivateKey().ToAddress();
-            _goldCurrency = new Currency("NCG", decimalPlaces: 2, minters: null);
+            _goldCurrency = Currency.Legacy("NCG", 2, null);
         }
 
         [Theory]

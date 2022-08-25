@@ -31,7 +31,7 @@ namespace Lib9c.Tests.Action
             if (includeNcg)
             {
                 var minters = ImmutableHashSet.Create(default(Address));
-                assets.Add(new Currency("NCG", 2, minters: minters) * 1);
+                assets.Add(Currency.Legacy("NCG", 2, minters) * 1);
             }
 
             IAccountStateDelta state = new State()

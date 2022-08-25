@@ -59,8 +59,8 @@ namespace Lib9c.Tests.Action
             }
 
             _tableSheets = new TableSheets(_sheets);
-            _crystal = new Currency("CRYSTAL", 18, minters: null);
-            _ncg = new Currency("NCG", 2, minters: null);
+            _crystal = Currency.Legacy("CRYSTAL", 18, null);
+            _ncg = Currency.Legacy("NCG", 2, null);
             var goldCurrencyState = new GoldCurrencyState(_ncg);
 
             var rankingMapAddress = new PrivateKey().ToAddress();

@@ -34,7 +34,7 @@ namespace Lib9c.Tests.Action
             }
         );
 
-        private static readonly Currency _currency = new Currency("NCG", 2, default(Address?));
+        private static readonly Currency _currency = Currency.Legacy("NCG", 2, null);
 
         [Fact]
         public void Constructor_ThrowsMemoLengthOverflowException()
@@ -173,7 +173,7 @@ namespace Lib9c.Tests.Action
         [Fact]
         public void ExecuteWithMinterAsSender()
         {
-            var currencyBySender = new Currency("NCG", 2, _sender);
+            var currencyBySender = Currency.Legacy("NCG", 2, _sender);
             var balance = ImmutableDictionary<(Address, Currency), FungibleAssetValue>.Empty
                 .Add((_sender, currencyBySender), _currency * 1000)
                 .Add((_recipient, currencyBySender), _currency * 10);
@@ -204,7 +204,7 @@ namespace Lib9c.Tests.Action
         [Fact]
         public void ExecuteWithMinterAsRecipient()
         {
-            var currencyByRecipient = new Currency("NCG", 2, _sender);
+            var currencyByRecipient = Currency.Legacy("NCG", 2, _sender);
             var balance = ImmutableDictionary<(Address, Currency), FungibleAssetValue>.Empty
                 .Add((_sender, currencyByRecipient), _currency * 1000)
                 .Add((_recipient, currencyByRecipient), _currency * 10);

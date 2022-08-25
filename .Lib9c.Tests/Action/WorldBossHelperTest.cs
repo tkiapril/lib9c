@@ -19,7 +19,7 @@ namespace Lib9c.Tests.Action
                 TicketPrice = ticketPrice,
                 AdditionalTicketPrice = additionalTicketPrice,
             };
-            var currency = new Currency("NCG", decimalPlaces: 2, minters: null);
+            var currency = Currency.Legacy("NCG", 2, null);
             var raiderState = new RaiderState
             {
                 PurchaseCount = purchaseCount,
