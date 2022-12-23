@@ -12,6 +12,9 @@ namespace Lib9c.Tests.Action.Coupons
         public static Address AgentAddress2 { get; } =
             new Address("0000000000000000000000000000000000000001");
 
+        public static Address AgentAddress3 { get; } =
+            new Address("0000000000000000000000000000000000000002");
+
         public static RewardSet RewardSet1 { get; } =
             new RewardSet(ImmutableDictionary<int, uint>.Empty
                 .Add(1, 2));
